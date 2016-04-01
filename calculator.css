@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+
+/*Responsive Body*/
+
+.calc-body {
+    position: absolute;
+    border-radius: 25px;
+    background-color: grey;
+    margin: auto;
+    width: 30em;
+    height: 25em;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.buttons {
+    position: absolute;
+    height: 50%;
+    width: 80%;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.well {
+    position: relative;
+    direction: rtl;
+    width: 80%;
+    height: 10%;
+    top: 2em;
+    margin: auto;
+}
+
+.row1,
+.row2,
+.row3,
+.row4 {
+    margin-top: 10px;
+}
+
+button {
+    width: 4em;
+}
