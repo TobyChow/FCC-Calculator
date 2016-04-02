@@ -38,6 +38,15 @@
     margin: auto;
 }
 
+.top-display {
+    margin-top: -1.3em;
+    direction: rtl;
+}
+
+.bot-display {
+    direction: rtl;
+}
+
 .row1,
 .row2,
 .row3,

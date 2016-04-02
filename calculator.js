@@ -1,28 +1,32 @@
-/*
-var calculator = 
-{
-	var sum = 0,
-	total:function(){return sum;},
-	
-}
-*/
 $(document).ready(function() {
     var sum = 0;
-    //Displays button value on calculator display
+    //Remove initial 0 if a number greater than 0 is inputted
+    var count = 0;
     $(".num").click(function() {
-        var number = $(this).text();
-        sum += number;
-        $("#display").append($(this).text());
+        if (($(this).text()) > 0 && count < 1) {
+            $("#bot-display").empty();
+            var number = $(this).text();
+            $("#bot-display").append($(this).text());
+            count++;
+            //Prevents multiple input of 0s if zero is the first and only value
+        } else if (($(this).text()) === '0' && count < 1) {
+            count = 0;
+        } else {
+            $("#bot-display").append($(this).text());
+        }
     });
 
     //All Clear function
     $("#AC").click(function() {
-        $("#display").empty();
+        $("#bot-display").empty();
+        $("#top-display").empty();
+        $("#bot-display").append('0');
+        count = 0;
     });
 
     //Equal function
     $("#equal").click(function() {
-        $("#display").empty();
-        $("#display").append(sum);
+        $("#bot-display").empty();
+        $("#bot-display").append(sum);
     });
 });
