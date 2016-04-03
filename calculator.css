@@ -40,11 +40,11 @@
 
 .top-display {
     margin-top: -1.3em;
-    direction: rtl;
+    float: right;
 }
 
 .bot-display {
-    direction: rtl;
+    float: right;
 }
 
 .row1,
