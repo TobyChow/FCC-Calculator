@@ -31,9 +31,15 @@ $(document).ready(function() {
         count = 0;
     });
 
+    //Clear Entry function - reset current number
+    $("#CE").click(function() {
+        $("#bot-display").empty();
+        $("#bot-display").append("0");
+        count = 0;
+    });
+
     //Equal function
     $("#equal").click(function() {
-        var current = Number($("#bot-display").text());
         if (id == 'plus') {
             sum += lastNumInput;
         }
@@ -44,7 +50,7 @@ $(document).ready(function() {
             sum = sum * lastNumInput;
         }
         if (id == 'divide') {
-            sum = lastNumInput / sum;
+            sum = sum / lastNumInput;
         }
         $("#bot-display").empty();
         $("#top-display").empty();
